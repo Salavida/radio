@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Rádio Vida</title>
+
+<style>
+  body {
+    background: url("imagens/background4.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 30px 0;
+    color: #fff;
+  }
+
+  /* ELEMENTOS ALINHADOS COM MESMA LARGURA */
+  .block {
+    width: 800px;
+    max-width: 95%;
+    border: 3px solid #ff8c00;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 0px;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+  }
+
+  /* IMAGEM DO TOPO */
+  .top-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* GIF VU METER — AGORA REDUZIDO */
+  .vu-meter {
+    max-height: 80px;   /* limita altura do GIF vertical */
+    width: 100%;         /* mantém proporção */
+    border-radius: 10px;
+  }
+
+  /* WIDGET */
+  .widget-wrapper {
+    width: 800px;
+    max-width: 95%;
+    border: 3px solid #ff8c00;
+    border-radius: 10px;
+    padding: 10px 0px; /* Adiciona um pequeno respiro em cima e em baixo se necessário */
+    min-height: 110px;  /* Altere este valor para a altura em pixels que pretender (ex: 100px, 120px, etc.) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cstrEmbed {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+    /* SEPARADOR */
+  .separator-image {
+    width: 1010px;
+    max-width: 95%;
+    margin-top: 60px;
+  }
+
+  .separator-image img {
+    width: 100%;
+    height: 200px; /* Altere este valor para definir a altura pretendida (ex: 40px, 50px, 70px) */
+    object-fit: cover; /* Corta ligeiramente nas pontas para preencher a nova altura sem distorcer */
+    border-radius: 10px;
+  }
+  
+  
+    /* ESTILO DO BOTÃO DE CONTACTO */
+  .contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff8c00 !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 60px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contact-button:hover {
+    background-color: #e67e00 !important;
+  }
+  
+  
+</style>
+
+</head>
+<body>
+
+<!-- BLOCO DA IMAGEM DO TOPO -->
+<div class="block">
+  <img src="imagens/logo1.png" class="top-image" alt="Topo da Rádio">
+</div>
+
+<!-- BLOCO DO GIF VU METER -->
+<div class="block">
+  <img src="imagens/vu1.gif" class="vu-meter" alt="VU Meter">
+</div>
+
+<!-- BLOCO DO WIDGET -->
+<div class="widget-wrapper">
+  <div data-type="newStreamPlayer"
+       data-publicToken="79faab3b-0ec9-479c-9960-789dd72d25b7"
+       data-theme="dark"
+       data-color="CE7B0E"
+       data-channelId=""
+       data-rendered="false"
+       class="cstrEmbed">
+    <a href="https://www.caster.fm">Shoutcast Hosting</a>
+    <a href="https://www.caster.fm">Stream Hosting</a>
+    <a href="https://www.caster.fm">Radio Server Hosting</a>
+  </div>
+</div>
+
+
+<!-- BOTÃO DE CONTACTO -->
+<a href="mailto:salavida2026@gmail.com" class="contact-button">E-MAIL</a>
+
+<!-- SEPARADOR NO FINAL DE TUDO -->
+<div class="separator-image">
+  <img src="imagens/banner.png" alt="Separador">
+</div>
+
+<!-- SINTONIZADOR INJETADO NO FINAL -->
+<div class="block" style="border: none; background: transparent; margin-top: 30px; overflow: hidden; max-width: 800px; width: 100%;">
+  <iframe src="sintonizador.html" 
+          width="100%" 
+          height="420" 
+          frameborder="0" 
+          scrolling="no" 
+          style="display: block; border: none; overflow: hidden; width: 100%; max-width: 100%; height: 420px;">
+  </iframe>
+</div>
+
+<script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+
+</body>
+</html>
