@@ -136,14 +136,21 @@
 
 <!-- SINTONIZADOR INJETADO NO FINAL -->
 <div class="block" style="border: none; background: transparent; margin-top: 30px; overflow: hidden; width: 100%; max-width: 800px;">
-  <div style="width: 100%; height: clamp(420px, 55vw, 480px);">
-    <iframe src="sintonizador.html" 
-            frameborder="0" 
-            scrolling="no" 
-            style="display: block; border: none; width: 100%; height: 100%;">
-    </iframe>
-  </div>
+  <iframe id="player-iframe" src="sintonizador.html" 
+          frameborder="0" 
+          scrolling="no" 
+          style="display: block; border: none; width: 100%; overflow: hidden;">
+  </iframe>
 </div>
+
+<script>
+  // Ajusta automaticamente a altura do sintonizador para nunca cortar nada em nenhum dispositivo
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'resizePlayer') {
+      document.getElementById('player-iframe').style.height = e.data.height + 'px';
+    }
+  });
+</script>
 
 <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
 
