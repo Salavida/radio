@@ -629,6 +629,12 @@
         border-radius: 2 !important;   /* Opcional: retira os cantos arredondados se quiser que encoste totalmente às pontas do telemóvel */
         margin: 0 !important;
     }
+
+	/* Puxa o segundo player para mais perto da imagem do banner */
+    .second-player, .player-container-2 /* Substitua pela classe real do segundo player se for diferente */ {
+        margin-top: 5px !important; /* Reduz o espaço acima do segundo player (experimente 0px se quiser colado) */
+    }  
+	  
 }
 </style>
 
@@ -883,7 +889,8 @@
         { name: "Sunshine Live", genre: "Electrónica / Dance", url: "https://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-128-8609439?sABC=6n60n34p%230%231sn9n8opqqrsqqr88op5o30rs4r94s02%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1784718156", api: null },
         { name: "Black Metal Radio", genre: "Metal / Black Metal", url: "https://streaming.live365.com/a05584", api: null },
         { name: "100 Greatest Heavy Metal", genre: "Metal / Heavy / Hits", url: "https://cast1.torontocast.com:4660/stream", api: null },
-        { name: "Delta Radio - Hard Rock", genre: "Metal / Heavy", url: "https://deltaradio.streamabc.net/regc-deltahardheavy-aacplus-64-4332345", api: null }		
+        { name: "Delta Radio - Hard Rock", genre: "Metal / Heavy", url: "https://deltaradio.streamabc.net/regc-deltahardheavy-aacplus-64-4332345", api: null },
+		{ name: "Modular Station", genre: "Experimental / Modular / Synth", url: "https://broadcast.modular-station.com/radio/8000/radio.aac", api: null },
     ];
 
     const stationSelect = document.getElementById('station-select');
