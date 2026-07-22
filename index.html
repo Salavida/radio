@@ -614,14 +614,19 @@
     }
 
     .separator-image {
-        margin-top: 15px !important;
+        width: 100% !important;        /* Força a ocupar a largura total disponível */
+        max-width: 100% !important;    /* Remove o limite de 95% para aproveitar todo o ecrã */
+        margin-top: 5px !important;
         margin-bottom: 0px !important;
+        padding-left: 0 !important;    /* Remove espaços internos caso o contentor tenha */
+        padding-right: 0 !important;
     }
 
     .separator-image img {
-        height: auto !important; /* Permite que a imagem assuma a altura proporcional correta */
-        max-height: 120px !important; /* Limita para não ficar gigante no telemóvel (ajuste se quiser maior/menor) */
         width: 100% !important;
+        height: auto !important;
+        max-height: 120px !important;
+        border-radius: 2 !important;   /* Opcional: retira os cantos arredondados se quiser que encoste totalmente às pontas do telemóvel */
         margin: 0 !important;
     }
 }
