@@ -609,14 +609,15 @@
     .buttons-row {
         justify-content: center;
         gap: 10px;
-        margin-bottom: 5px; /* Reduz o espaço logo abaixo da linha de botões */
+        margin-bottom: 5px;
     }
 
-    /* Se a imagem de separador estiver logo a seguir ou dentro da estrutura */
-    .separador, img[src*="separador"] {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        max-height: 20px; /* Garante que a imagem não estica verticalmente no telemóvel */
+    .separator-image {
+        margin-top: 20px;
+    }
+
+    .separator-image img {
+        height: 80px;
     }
 }
 </style>
